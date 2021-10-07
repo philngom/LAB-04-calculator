@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply, divide } from './calculations.js';
+import { add, subtract, multiply, divide, modulo } from './calculations.js';
 
 const addNumber1 = document.getElementById('add-number-1');
 const addNumber2 = document.getElementById('add-number-2');
@@ -20,6 +20,11 @@ const divideNumber1 = document.getElementById('divide-number-1');
 const divideNumber2 = document.getElementById('divide-number-2');
 const divideEqualsButton = document.getElementById('divide-equals-button');
 const divideAnswer = document.getElementById('divide-answer');
+
+const moduloNumber1 = document.getElementById('modulo-number-1');
+const moduloNumber2 = document.getElementById('modulo-number-2');
+const moduloEqualsButton = document.getElementById('modulo-equals-button');
+const moduloAnswer = document.getElementById('modulo-answer');
 // reference needed DOM elements
 
 
@@ -50,3 +55,10 @@ divideEqualsButton.addEventListener('click', () => {
     let num2 = +divideNumber2.value;
     divideAnswer.textContent = divide(num1, num2);
 });
+
+moduloEqualsButton.addEventListener('click', () => {
+    let num1 = +moduloNumber1.value;
+    let num2 = +moduloNumber2.value;
+    moduloAnswer.textContent = modulo(num1, num2);
+});
+
