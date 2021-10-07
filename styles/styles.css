@@ -1,5 +1,5 @@
 
-body {        
+body {
     font-family: 'Titillium Web', sans-serif;
     background-color: #FFFCFA;
     display: grid;
@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    padding: 30px;
+    margin: 0 auto;
 }
 
 header {
