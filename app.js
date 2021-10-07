@@ -1,5 +1,7 @@
 // import functions
-import { add, subtract, multiply, divide, modulo, integerDivision } from './calculations.js';
+import { add, subtract, multiply, divide, modulo, integerDivision, pythagoras } from './calculations.js';
+
+// reference needed DOM elements
 
 const addNumber1 = document.getElementById('add-number-1');
 const addNumber2 = document.getElementById('add-number-2');
@@ -30,7 +32,11 @@ const intDivNumber1 = document.getElementById('int-div-number-1');
 const intDivNumber2 = document.getElementById('int-div-number-2');
 const intDivEqualsButton = document.getElementById('int-div-equals-button');
 const intDivAnswer = document.getElementById('int-div-answer');
-// reference needed DOM elements
+
+const pythagorasNumber1 = document.getElementById('pythagoras-number-1');
+const pythagorasNumber2 = document.getElementById('pythagoras-number-2');
+const pythagorasEqualsButton = document.getElementById('pythagoras-equals-button');
+const pythagorasAnswer = document.getElementById('pythagoras-answer');
 
 
 // set event listeners
@@ -71,6 +77,12 @@ intDivEqualsButton.addEventListener('click', () => {
     let num1 = +intDivNumber1.value;
     let num2 = +intDivNumber2.value;
     intDivAnswer.textContent = integerDivision(num1, num2);
+});
+
+pythagorasEqualsButton.addEventListener('click', () => {
+    let num1 = +pythagorasNumber1.value;
+    let num2 = +pythagorasNumber2.value;
+    pythagorasAnswer.textContent = pythagoras(num1, num2);
 });
 
 

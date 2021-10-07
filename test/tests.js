@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, subtract, multiply, divide, modulo, integerDivision } from '../calculations.js';
+import { add, subtract, multiply, divide, modulo, integerDivision, pythagoras } from '../calculations.js';
 
 const test = QUnit.test;
 
@@ -88,5 +88,17 @@ test('testing integer division function', (expect) => {
     const actual = integerDivision(x, y);
 
     //Expect
+    expect.equal(actual, expected);
+});
+
+test('testing pythagoras function', (expect) => {
+    //Arrange
+    const x = 3;
+    const y = 4;
+    const expected = 5;
+
+    //Act
+    const actual = pythagoras(x, y);
+
     expect.equal(actual, expected);
 });
