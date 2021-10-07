@@ -17,3 +17,7 @@ export function divide(x, y) {
 export function modulo(x, y) {
     return x % y;
 }
+
+export function integerDivision(x, y) {
+    return Math.floor(x / y);
+}

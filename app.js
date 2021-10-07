@@ -1,5 +1,5 @@
 // import functions
-import { add, subtract, multiply, divide, modulo } from './calculations.js';
+import { add, subtract, multiply, divide, modulo, integerDivision } from './calculations.js';
 
 const addNumber1 = document.getElementById('add-number-1');
 const addNumber2 = document.getElementById('add-number-2');
@@ -25,6 +25,11 @@ const moduloNumber1 = document.getElementById('modulo-number-1');
 const moduloNumber2 = document.getElementById('modulo-number-2');
 const moduloEqualsButton = document.getElementById('modulo-equals-button');
 const moduloAnswer = document.getElementById('modulo-answer');
+
+const intDivNumber1 = document.getElementById('int-div-number-1');
+const intDivNumber2 = document.getElementById('int-div-number-2');
+const intDivEqualsButton = document.getElementById('int-div-equals-button');
+const intDivAnswer = document.getElementById('int-div-answer');
 // reference needed DOM elements
 
 
@@ -61,4 +66,12 @@ moduloEqualsButton.addEventListener('click', () => {
     let num2 = +moduloNumber2.value;
     moduloAnswer.textContent = modulo(num1, num2);
 });
+
+intDivEqualsButton.addEventListener('click', () => {
+    let num1 = +intDivNumber1.value;
+    let num2 = +intDivNumber2.value;
+    intDivAnswer.textContent = integerDivision(num1, num2);
+});
+
+
 

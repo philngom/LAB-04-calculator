@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { add, subtract, multiply, divide, modulo } from '../calculations.js';
+import { add, subtract, multiply, divide, modulo, integerDivision } from '../calculations.js';
 
 const test = QUnit.test;
 
@@ -73,6 +73,19 @@ test('testing modulo function', (expect) => {
 
     //Act
     const actual = modulo(x, y);
+
+    //Expect
+    expect.equal(actual, expected);
+});
+
+test('testing integer division function', (expect) => {
+    //Arrange
+    const x = 10;
+    const y = 3;
+    const expected = 3;
+
+    //Act
+    const actual = integerDivision(x, y);
 
     //Expect
     expect.equal(actual, expected);
